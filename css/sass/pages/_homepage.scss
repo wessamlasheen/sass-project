@@ -1,0 +1,186 @@
+.slider{
+    padding:$padding-section;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        q{
+         margin-bottom:20px;
+         display: inline-block;
+         color: #888;
+         font-style: italic;
+         width:80%;
+         text-align: center;
+        }
+        .img-slider{
+            max-width:450px;
+            max-height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            
+            
+            img{
+               width:100%;
+               height: 100%;
+               display: none;
+               &.active-slider{
+                display: block;
+            }
+            }
+           
+            
+
+        }
+        .bullets{
+            margin:10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:3px;
+            li{
+                @include bordRad(10px);
+                background-color: $grayColor;
+                cursor: pointer; 
+                &.active,
+                &:hover{
+                    background-color: #fff;
+                    border: 2px solid #000;
+                }
+            }
+           
+        }
+      
+    }
+}
+
+// start services
+.services{
+    
+    .container{
+        
+        .services-content{
+            margin: 0 auto;
+            @extend %dFlex-center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            @media #{$maxSmall}{
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            .service{
+                width: 250px;
+                @media #{$maxSmall}{
+                    width: 200px;
+                }
+                .service-head{
+                    i{
+                      margin-right:10px;
+                    }
+                    span{
+                    
+        
+                    }
+                }
+                p{
+                  color:#888;
+                  margin:10px 0;
+                }
+                a,i{
+                 color: $redColor;
+                }
+                
+            }
+        }
+        
+    }
+}
+
+// end services
+
+// start our players
+.our-players{
+    margin:20px 0;
+    .container{
+        .players-content{
+            @extend %dFlex-center;
+            flex-wrap: wrap;
+            .player{
+              width: 200px;
+                .player-img{
+                    margin: 20px auto;
+                    width: 100%;
+                    background-color: #fff;
+                    @extend %box-shadow;
+                    
+                    img{
+                        max-width: 100%;
+
+                    }
+                }
+                p{
+                    color:$grayColor;
+                    margin-bottom: 20px;
+
+                }
+                a,i{
+                    color: $redColor;
+
+                }
+            }
+        }
+      
+
+    }
+}
+
+// end our players
+
+//start lorem
+.lorem{
+    padding: $padding-section;
+    .container{
+       
+        .lorem-imgs{
+            margin: 20px 0 ;
+            @extend %dFlex-center;
+            flex-wrap: wrap;
+            
+            .lorem-img{
+                width: 250px;
+                height: 150px;
+                border-radius: 5px;
+                overflow: hidden;
+                position: relative;
+                &::after{
+                    content: "";
+                    @include overlay();
+                    background-color: rgba($color: #000000, $alpha: 0.5);
+                   }
+                   &::before{
+                    position: absolute;
+                    content: "sass";
+                    left:50%;
+                    top:50%;
+                    transform: translate(-50%);
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 18px;
+                    z-index: 1;
+                   }
+                 img{
+                     width:100%;
+                     height: 100%;
+                }
+
+            }
+        }
+    }
+}
+
+
+//end lorem
+
+
+

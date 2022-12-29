@@ -1,0 +1,51 @@
+/*
+**overlay mixinin
+**add overlay to any elements
+*/
+@mixin overlay(){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    
+}
+
+/*
+**prixix mixin
+**add prifixs to any css3 property
+*/
+@mixin prifixer($proprty,$value,$prefixes){
+    @each $prifix in $prefixes {
+        #{"-" + $prifix + "-" + $proprty}:$value;
+        
+    }
+    #{$proprty} : $value;
+}
+/*
+**border radius 50% mixin
+*/
+@mixin bordRad($size){
+width: $size;
+height: $size;
+border-radius: 50%;
+}
+
+
+
+/*
+**animation mixin
+*/
+@mixin  keyF($animation-name) {
+    @-webkit-keyframes #{$animation-name}{
+        @content
+    }
+    @-moz-keyframes #{$animation-name}{
+        @content
+    }
+    @keyframes #{$animation-name}{
+        @content
+    }
+}
+
+

@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font:{
+        family:tahoma;
+        size:16px;
+    }
+    text-transform: capitalize;
+    line-height: 1.8;
+
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* placeholder for display flex*/
+%dFlex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+
+}
+%box-shadow{
+    @include prifixer(box-shadow,0 0 10px #eee,moz webkit o ms)
+}      

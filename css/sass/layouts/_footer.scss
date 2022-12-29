@@ -1,0 +1,85 @@
+footer{
+    padding: $padding-section;
+    background-color: #eee;
+    .container{
+        .footer-content{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            @media #{$maxSmall}{
+                flex-direction: column;
+            }
+            
+            .blog{
+                width: calc(100% / 3);
+               .blog-row{
+                margin: 20px 0;
+                display: flex;
+                gap:10px;
+
+                img{
+                  width:60px;
+                  height: 60px;
+                  background-color: #ddd;
+                  border: 1px solid orange;
+                  border-radius: 4px;
+                }
+                .data{
+                    h5{
+                        color: $redColor;
+
+                    }
+                    p{
+                        color: $grayColor;
+                        font-size: 14px;
+
+                    }
+                }
+               }
+            }
+            .details{
+                div{
+                    margin: 10px 0 ;
+                    p{
+                        color: $grayColor;
+                        font-size: 14px;
+                        span{
+                            color: $redColor;
+                        }
+                    }
+                }
+
+            }
+            .contact{
+                form{
+                    input{
+                     display: block;
+                     margin: 10px 0;
+                     padding: 5px;
+                     border: none;
+                     border-radius: 5px;
+                     color: $grayColor;
+                    }
+                    textarea{
+
+                        resize: none;
+                        padding: 5px;
+                        height: 100px;
+                     border: none;
+                     border-radius: 5px;
+                     color: $grayColor;
+                    }
+                    input[type="submit"]{
+                        background-color: $redColor;
+                        color: #fff;
+                        cursor: pointer;
+                        
+
+                    }
+                }
+
+            }
+        }
+
+    }
+}
